@@ -21,7 +21,7 @@ $(document).ready(function(){
         datatype: 'jsonp',
         data: {},
         jsonpCallback: 'fetchData',
-        type: 'GET'
+        type: 'GET',
         success: function(data){
           var capa = L.geoJson(data, {
             onEachFeature: onEachFeature
