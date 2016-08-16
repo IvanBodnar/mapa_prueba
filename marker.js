@@ -18,9 +18,9 @@ $(document).ready(function(){
       $.ajax({
         url:'http://104.236.39.222/siniestros/api/search/mes/'.replace('mes', mes),
         datatype: 'jsonp',
-        data: {
-          
-        },
+        data: {},
+        jsonpCallback: 'fetchData,
+        type: 'GET'
         success: function(data){
           var capa = L.geoJson(data, {
             onEachFeature: onEachFeature
