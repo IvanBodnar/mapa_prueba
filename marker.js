@@ -17,10 +17,11 @@ $(document).ready(function(){
       var mes = $('#meses').val();
       $.ajax({
         url:'http://104.236.39.222/siniestros/api/search/mes/'.replace('mes', mes),
+        jsonp: '$jsonp',
         datatype: 'jsonp',
         data: {},
         jsonpCallback: 'fetchData',
-        type: 'GET',
+        type: 'GET'
         success: function(data){
           var capa = L.geoJson(data, {
             onEachFeature: onEachFeature
