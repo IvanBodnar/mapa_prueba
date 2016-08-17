@@ -16,7 +16,7 @@ $(document).ready(function(){
       markers.clearLayers();
       var mes = $('#meses').val();
       $.ajax({
-        url:'https://104.236.39.222/siniestros/api/search/mes/'.replace('mes', mes),
+        url:'http://104.236.39.222/siniestros/api/search/mes/'.replace('mes', mes),
         data: {
           format: 'json'
         },
