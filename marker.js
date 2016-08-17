@@ -16,12 +16,10 @@ $(document).ready(function(){
       markers.clearLayers();
       var mes = $('#meses').val();
       $.ajax({
-        url:'http://104.236.39.222/siniestros/api/search/mes/'.replace('mes', mes),
-        jsonp: '$jsonp',
-        datatype: 'jsonp',
-        data: {},
-        jsonpCallback: 'fetchData',
-        type: 'GET',
+        url:'https://104.236.39.222/siniestros/api/search/mes/'.replace('mes', mes),
+        data: {
+          format: 'json'
+        },
         success: function(data){
           var capa = L.geoJson(data, {
             onEachFeature: onEachFeature
